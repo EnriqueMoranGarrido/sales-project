@@ -1,12 +1,11 @@
 <p>sales-person-list works!</p>
-<table border="1">
-  <thead>
+<table class="table table-hover">
+  <thead class="table-dark">
     <tr>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Email</th>
       <th>Sales Volume</th>
-      <th>met Quota?</th>
     </tr>
   </thead>
   <tbody>
@@ -15,12 +14,6 @@
       <td>{{ tempSalesPerson.lastName }}</td>
       <td>{{ tempSalesPerson.email }}</td>
       <td>{{ tempSalesPerson.salesVolume }}</td>
-      <td>
-        <div *ngIf="tempSalesPerson.salesVolume >= 3; else myElseBlock">
-          Yes! :D
-        </div>
-        <ng-template #myElseBlock> No:-( </ng-template>
-      </td>
     </tr>
   </tbody>
 </table>
